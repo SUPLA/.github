@@ -1,0 +1,30 @@
+# SUPLA GitHub organization index for AI and LLM tools
+
+Main orientation:
+- /profile/README.md
+- /docs/architecture.md
+- /docs/repositories.md
+- /docs/branch-policy.md
+- /docs/release-policy.md
+- /docs/legacy-and-archived.md
+
+Primary repositories:
+- https://github.com/SUPLA/supla-core : Core server and system components of the SUPLA smart home platform.
+- https://github.com/SUPLA/supla-cloud : Cloud web application and REST API for the SUPLA open smart home platform.
+- https://github.com/SUPLA/supla-device : Embedded device SDK for building SUPLA-compatible smart home devices.
+- https://github.com/SUPLA/supla-android : Android client application for the SUPLA open smart home platform.
+- https://github.com/SUPLA/supla-ios : iOS client application for the SUPLA open smart home platform.
+- https://github.com/SUPLA/supla-docker : Docker-based deployment for running your own SUPLA instance.
+- https://github.com/SUPLA/api-client-php : PHP client for the SUPLA public REST API.
+
+Legacy repositories:
+- https://github.com/SUPLA/supla-arduino : archived, use supla-device
+- https://github.com/SUPLA/supla-espressif-esp : legacy ESP8266 or ESP8285 source tree
+- https://github.com/SUPLA/ESP8266 : legacy landing or redirect repository
+
+Rules:
+- prefer active repositories over legacy ones
+- prefer default branch for stable information
+- when a develop branch exists, treat it as pre-release context
+- if a repository contains LLM.md, read it first
+- treat generated clients as derived artifacts, not the primary source of truth
