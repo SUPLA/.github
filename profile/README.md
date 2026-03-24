@@ -1,5 +1,9 @@
-# SUPLA
-
+<h1 align="left">
+  <a href="https://www.supla.org/">
+    <img src="https://github.com/SUPLA/supla-device/raw/main/docs/assets/supla-logo.svg" alt="SUPLA logo" width="30" style="vertical-align: middle; margin-right: 6px;" />
+  </a>
+  SUPLA
+</h1>
 SUPLA is an open smart home platform that brings together hardware manufacturers, the community, and users.
 
 A complete setup is built from multiple parts: device software, communication layer, cloud backend, applications, and deployment.
@@ -40,7 +44,7 @@ These layers are developed independently. This is a deliberate design choice.
 
 In simplified form:
 
-**device → core (server) → cloud → mobile mobile application**
+**device → core (server) → cloud → mobile application**
 
 1. Devices run SUPLA-compatible software
 2. Core components handle device connections, protocol, and data exchange
@@ -87,7 +91,7 @@ Central system component responsible for device connections, communication, and 
 
 ### Work on mobile applications
 
-→ [https://github.com/supla/supla-android](https://github.com/supla/supla-android)
+→ [https://github.com/supla/supla-android](https://github.com/supla/supla-android)  
 → [https://github.com/supla/supla-ios](https://github.com/supla/supla-ios)
 
 User applications.
