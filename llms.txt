@@ -2,11 +2,6 @@
 
 Main orientation:
 - /profile/README.md
-- /docs/architecture.md
-- /docs/repositories.md
-- /docs/branch-policy.md
-- /docs/release-policy.md
-- /docs/legacy-and-archived.md
 
 Primary repositories:
 - https://github.com/SUPLA/supla-core : Core server and system components of the SUPLA smart home platform.

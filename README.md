@@ -1,39 +1,128 @@
-# SUPLA GitHub organization
+# SUPLA
 
-> Part of SUPLA - an open smart home platform that brings together hardware manufacturers, the community, and users.  
-> Learn more at [supla.org](https://www.supla.org).
+SUPLA is an open smart home platform that brings together hardware manufacturers, the community, and users.
 
-This repository contains the organization-level profile, routing docs, and shared community files for the SUPLA GitHub organization.
-Its role is to explain how the main repositories fit together and help contributors, integrators, self-hosters, and users land in the correct place.
+A complete setup is built from multiple parts: device software, communication layer, cloud backend, applications, and deployment.
 
-## Main repositories
+---
 
-| Repository | Description | Open it when... |
-|---|---|---|
-| `supla-core` | Core server and system components of the SUPLA smart home platform. | you work on low-level server or protocol-side components |
-| `supla-cloud` | Cloud web application and REST API for the SUPLA open smart home platform. | you work on the Cloud backend, public REST API, or web UI |
-| `supla-device` | Embedded device SDK for building SUPLA-compatible smart home devices. | you build or modify device-side software |
-| `supla-android` | Android client application for the SUPLA open smart home platform. | you work on the Android application |
-| `supla-ios` | iOS client application for the SUPLA open smart home platform. | you work on the iOS application |
-| `supla-docker` | Docker-based deployment for running your own SUPLA instance. | you want to self-host or deploy a full SUPLA stack |
-| `api-client-php` | PHP client for the SUPLA public REST API. | you integrate with SUPLA Cloud from PHP |
+## If you are a user
 
-## Reading order
+If you want to use SUPLA (not work on its development):
 
-- Start with [profile/README.md](profile/README.md) for the public organization entry.
-- Use [docs/architecture.md](docs/architecture.md) for the high-level platform map.
-- Use [docs/repositories.md](docs/repositories.md) for detailed routing.
-- Use [docs/legacy-and-archived.md](docs/legacy-and-archived.md) to avoid routing people into historical repositories.
+* You can use SUPLA with public cloud services (no self-hosting required)
+* You can also run your own instance using self-hosting
 
-## Shared organization documents
+For typical usage, start with:
 
-- [CONTRIBUTING.md](CONTRIBUTING.md)
-- [SECURITY.md](SECURITY.md)
-- [SUPPORT.md](SUPPORT.md)
-- [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md)
+* [https://www.supla.org](https://www.supla.org)
+* [https://forum.supla.org](https://forum.supla.org)
 
-## Notes on repository state
+If you are a software developer or a power user, continue below.
 
-The organization contains a mix of active, generated, legacy, and archived repositories.
-Some repositories also use a `develop` branch for changes that are not yet released.
-Use the default branch as the stable public entry point, and treat `develop` as pre-release when it exists.
+---
+
+## How SUPLA is structured
+
+SUPLA is divided into layers with clear responsibilities:
+
+* device software
+* core (server, protocol, communication)
+* cloud (user interface, configuration, API)
+* mobile applications
+* deployment and infrastructure
+
+These layers are developed independently. This is a deliberate design choice.
+
+---
+
+## How the system works
+
+In simplified form:
+
+**device → core (server) → cloud → mobile mobile application**
+
+1. Devices run SUPLA-compatible software
+2. Core components handle device connections, protocol, and data exchange
+3. Cloud provides user interface, configuration, accounts, and API access
+4. Applications connect to the system through server/core and cloud interfaces
+
+This separation is key to understanding the system.
+
+---
+
+## Start from your goal
+
+### Run SUPLA (self-hosting)
+
+→ [https://github.com/supla/supla-docker](https://github.com/supla/supla-docker)
+
+Infrastructure and deployment setup.
+
+---
+
+### Build or integrate a device
+
+→ [https://github.com/supla/supla-device](https://github.com/supla/supla-device)
+
+Device-side software and SDK.
+
+---
+
+### Work on cloud (user interface, configuration, API)
+
+→ [https://github.com/supla/supla-cloud](https://github.com/supla/supla-cloud)
+
+User-facing cloud interface, configuration, and API.
+
+---
+
+### Work on core system (server, communication, system logic)
+
+→ [https://github.com/supla/supla-core](https://github.com/supla/supla-core)
+
+Central system component responsible for device connections, communication, and core system logic.
+
+---
+
+### Work on mobile applications
+
+→ [https://github.com/supla/supla-android](https://github.com/supla/supla-android)
+→ [https://github.com/supla/supla-ios](https://github.com/supla/supla-ios)
+
+User applications.
+
+---
+
+## What SUPLA is not
+
+SUPLA is not:
+
+* a single deployable system from one repository
+* a closed ecosystem tied to one manufacturer
+* a monolithic codebase combining all layers
+
+Understanding this avoids most confusion when working with the platform.
+
+---
+
+## For contributors
+
+Choose the layer you want to work on:
+
+* Devices → [https://github.com/supla/supla-device](https://github.com/supla/supla-device)
+* Core system (server, communication, logic) → [https://github.com/supla/supla-core](https://github.com/supla/supla-core)
+* Cloud (UI, configuration, API) → [https://github.com/supla/supla-cloud](https://github.com/supla/supla-cloud)
+* Mobile applications → [https://github.com/supla/supla-android](https://github.com/supla/supla-android) / [https://github.com/supla/supla-ios](https://github.com/supla/supla-ios)
+* Deployment → [https://github.com/supla/supla-docker](https://github.com/supla/supla-docker)
+
+Each repository defines its own scope and contribution rules.
+
+---
+
+## Legacy repositories
+
+Some repositories are no longer part of the current development path.
+
+If something looks outdated, archived, or inconsistent with the structure above, treat it as historical.
+
